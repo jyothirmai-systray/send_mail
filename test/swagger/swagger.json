@@ -1,0 +1,83 @@
+{
+    "swagger": "2.0",
+    "info": {
+      "title": "Blah",
+      "description": "",
+      "version": "1.0"
+    },
+    "produces": ["application/json"],
+    "paths": {
+      "/test": {
+        "post": {
+          "x-swagger-router-controller": "home",
+          "operationId": "index",
+          "tags": ["/test"],
+          "description": "[Login 123](https://www.google.com)",
+          "parameters": [{
+            "name": "test",
+            "in": "formData",
+            "type": "array",
+            "collectionFormat": "multi",
+            "items": {
+              "type": "integer"
+             }
+          },
+        { "name": "profileId", "in": "formData", "required": true, "type": "string" },
+        { "name": "file", "in": "formData", "type": "file", "required": "true" }],
+          "responses": {}
+        }
+      },
+      "/user/signup": {
+        "post": {
+          "x-swagger-router-controller": "user",
+          "operationId": "index",
+          "tags": ["/test"],
+          "description": "signup",
+          "parameters": [{
+            "name": "test",
+            "in": "formData",
+            "type": "array",
+            "collectionFormat": "multi",
+            "items": {
+              "type": "integer"
+             }
+          },
+        { "name": "email", "in": "formData", "type": "string", "required": "true" },
+        { "name": "password", "in": "formData", "type": "string", "required": "true" },
+        { "name": "confirmpassword", "in": "formData", "type": "string", "required": "true" },
+        { "name": "phonenumber", "in": "formData", "type": "string", "required": "true" }],
+          "responses": {}
+        }
+      },
+      "/user/login": {
+        "post": {
+          "x-swagger-router-controller": "user",
+          "operationId": "index",
+          "tags": ["/test"],
+          "description": "login",
+          "parameters": [{
+            "name": "test",
+            "in": "formData",
+            "type": "array",
+            "collectionFormat": "multi",
+            "items": {
+              "type": "integer"
+             }
+          },
+        { "name": "email", "in": "formData", "type": "string", "required": "true" },
+        { "name": "password", "in": "formData", "type": "string", "required": "true" }],
+          "responses": {}
+        }
+      },
+      "/bar": {
+         "get": {
+           "x-swagger-router-controller": "bar",
+           "operationId": "impossible",
+           "tags": ["/test"],
+           "description": "",
+           "parameters": [],
+           "responses": {}
+         }
+       }
+    }
+ }
