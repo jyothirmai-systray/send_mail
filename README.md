@@ -18,6 +18,8 @@ Install [Node.js](http://nodejs.org)
 `cd IAS-Backend`
 
 `npm install`
+`npm init --yes`
+`npm install @sendgrid/mail`
 
 `node app`
 
